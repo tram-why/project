@@ -1,8 +1,10 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from rest_framework.fields import CharField, EmailField, Field, SerializerMethodField
+from rest_framework.fields import CharField, EmailField, Field, SerializerMethodField, IntegerField
 from rest_framework.test import APIRequestFactory
+
+from enjoyly.models import Event, Location, JoinedEvent
 
 factory = APIRequestFactory()
 request = factory.get('/')
@@ -10,9 +12,21 @@ request = factory.get('/')
 User = get_user_model()
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
+    location = SerializerMethodField()
+    joined_event = SerializerMethodField()
     class Meta:
         model = User
-        fields = ('url', 'id', 'first_name', 'last_name', 'email', 'friends', 'friends_requests')
+        fields = ('url', 'id', 'first_name', 'last_name', 'email', 'location', 'joined_event')
+
+    def get_location(self, obj):
+        l_qs = Location.objects.filter(user_id=obj.id)
+        location = LocationSerializer(l_qs,many=True, context={'request':request}).data
+        return location
+
+    def get_joined_event(self, obj):
+        e_qs = JoinedEvent.objects.filter(user_id=obj.id)
+        event = JoinedEventSerializer(e_qs, many=True, context={'request':request}).data
+        return event
 
 class UserCreateSerializer(serializers.HyperlinkedModelSerializer):
     first_name = CharField()
@@ -67,3 +81,40 @@ class UserLoginSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError("Incorrect password")
 
         return data
+
+class EventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = ('url', 'id', 'user_id', 'name', 'description', 'budget', 'numberOfPeople')
+
+class EventCreateSerializer(serializers.ModelSerializer):
+    user_id = IntegerField()
+    class Meta:
+        model = Event
+        fields = ('user_id', 'name', 'description', 'budget', 'numberOfPeople')
+
+    def create(self, data):
+        user_id = data['user_id']
+        name = data['name']
+        description = data['description']
+        budget = data['budget']
+        numberOfPeople = data['numberOfPeople']
+        event_obj = Event(
+            user_id = user_id,
+            name = name,
+            description= description,
+            budget=budget,
+            numberOfPeople=numberOfPeople
+        )
+        event_obj.save()
+        return data
+
+class LocationSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Location
+        fields = ('latitude', 'longtitude')
+
+class JoinedEventSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = JoinedEvent
+        fields = ('event_id',)
