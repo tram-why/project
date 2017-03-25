@@ -26,7 +26,7 @@ public class SignOnActivity extends AppCompatActivity {
 
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
-        bSignOn = (Button) findViewById(R.id.bSignUp);
+        bSignOn = (Button) findViewById(R.id.bSignOn);
         tSignUpLink = (TextView) findViewById(R.id.tSignUpLink);
 
 
