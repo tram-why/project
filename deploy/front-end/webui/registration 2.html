@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>enjoyly!</title>
+    <link rel="stylesheet" type="text/css" href="registration%202.css" href="firstMainPage.css">
+
+</head>
+<body>
+
+<main>
+    <div class="mainDiv">
+        <div class="left">
+            <img src="images/enjoyly11.png" width="400" height="400">
+        </div>
+        <div class="right">
+            <header>
+                <p><input type="image" src="images/avaphoto.png" width="50" height="50" alt="OK">
+                    <span class="uploadPhoto">Add photo</span>
+            </header>
+            <form class="login">
+                <input type="text" name="first_name" placeholder="First name">
+            </form>
+            <form class="login">
+                <input type="text" name="last_name" placeholder="Last name">
+            </form>
+            <div class="dataOfBirth">
+                <span class="birth"><label for="date_of_birth">Birthday<img class="calendar" src="images/calendar.png"></label></span>
+
+                <form class="login">
+                    <input type="date" name="date_of_birth" id="date_of_birth">
+                </form>
+            </div>
+            <div class="Sex">
+                <span class="nameSex">Sex</span>
+                <form>
+                <input type="radio" checked name="sex" id="sex1"/>
+                <label for="sex1"> Male </label>
+                <input type="radio" name="sex" id="sex2"/>
+                <label for="sex2">Female</label></form>
+            </div>
+
+            <div class="sel"><select required name="country">
+                <option value="" disabled selected hidden>Country</option>
+                <option>Ukraine</option>
+                <option>Poland</option>
+            </select></div>
+            <div class="sel">
+                <select required name="country">
+                    <option value="" disabled selected hidden>City</option>
+                    <option>Lviv</option>
+                    <option>Kyiv</option>
+                </select></div>
+            <form class="phone">
+                <input id="phone" type="tel" name="phone_number" placeholder="Phone number">
+            </form>
+            <form class="aboutYourself">
+                <textarea rows="4" cols="40">About_yourself</textarea>
+            </form>
+            <form>
+                <p><input type="submit" value="SAVE" class="signIn"></p>
+            </form>
+
+        </div>
+    </div>
+
+
+</main>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+body{
+    font-family: "Comic Sans MS";
+}
+.navigation{
+    border: solid black ;
+    min-height: 64px;
+}
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("");
+    background-repeat: no-repeat;
+    padding: 10px 20px 12px 40px;
+
+}
+button{
+    width: 160px;
+    height: 50px;
+    font-size: 28px;
+    margin: auto;
+    border: black 3px solid;
+    box-shadow: 3px 3px;
+    background: white;
+    outline: none;
+
+}
+button:hover {
+    background-color: rgba(162, 169, 168, 0.34);
+}
+.header{
+    position: absolute;
+    min-width: 1330px;
+    height: 55px;
+    border-bottom: 4px solid black;
+    vertical-align: middle;
+    background-color: white;
+}
+.emblem{
+    position: absolute;
+    float: left;
+    margin-left: 70px;
+}
+.emblem1{
+    position: absolute;
+    float: left;
+    margin-left: 130px;
+}
+.emblem2{
+    position: absolute;
+    float: left;
+    margin-left: 160px;
+}
+.search{
+    position: absolute;
+    margin: 0 0 10px 43%;
+}
+.bottum{
+    position: static;
+    float: right;
+    margin-right: 50px;
+    vertical-align: middle;
+}
+.headertools{
+    position: static;
+    float: right;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+#search{
+    border-radius: 20px;
+    border-bottom-color: #c3b8cc;
+    border-right-color: #B35668;
+    border-left-color: #B35668;
+    border-top-color: purple;
+}
+
+h1{
+    padding-left:40px;
+}
+p{
+    padding-left: 20px;
+}
+
