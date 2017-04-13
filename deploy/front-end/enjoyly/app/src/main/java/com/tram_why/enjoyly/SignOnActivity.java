@@ -8,6 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.concurrent.ExecutionException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import retrofit2.Response;
 
 public class SignOnActivity extends AppCompatActivity {
 
@@ -37,6 +44,24 @@ public class SignOnActivity extends AppCompatActivity {
                 password = etPassword.getText().toString();
                 Request request = new Request();
                 request.execute();
+                Pattern pattern = Pattern.compile("message=.*,");
+                try {
+                    Matcher matcher = pattern.matcher(request.get());
+                    while (matcher.find()){
+                        int start = matcher.start()+8;
+                        int end = matcher.end()-1;
+                        String match = request.get().substring(start, end);
+                        Toast.makeText(getApplicationContext(), match, Toast.LENGTH_LONG).show();
+                        if (match.equals("OK")){
+                            Intent mainIntent = new Intent(SignOnActivity.this, MainActivity.class);
+                            SignOnActivity.this.startActivity(mainIntent);
+                        }
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
             }
         });
         tSignUpLink.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +73,7 @@ public class SignOnActivity extends AppCompatActivity {
         });
 
     }
-    class Request extends AsyncTask<Void, Void, Void> {
+    class Request extends AsyncTask<Void, Void, String> {
 
         @Override
         protected void onPreExecute() {
@@ -56,15 +81,17 @@ public class SignOnActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Void doInBackground(Void... params) {
+        protected String doInBackground(Void... params) {
             Services services = new Services();
-            services.SignOn(email, password);
-            return null;
+            Response response = services.SignOn(email, password);
+            System.out.println(response.toString());
+            return response.toString();
         }
 
         @Override
-        protected void onPostExecute(Void result) {
+        protected void onPostExecute(String result) {
             super.onPostExecute(result);
+            return ;
         }
     }
 }
