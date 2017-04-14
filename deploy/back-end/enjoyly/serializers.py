@@ -114,7 +114,26 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
         model = Location
         fields = ('latitude', 'longtitude')
 
+class JoinEventSerializer(serializers.ModelSerializer):
+    user_id = IntegerField()
+    event_id = IntegerField()
+
+    class Meta:
+        model = JoinedEvent
+        fields = ('user_id', 'event_id')
+
+    def create(self, data):
+        user_id = data['user_id']
+        event_id = data['event_id']
+        join_event_obj = JoinedEvent (
+            user_id= user_id,
+            event_id = event_id
+        )
+        join_event_obj.save()
+        return data
+
 class JoinedEventSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = JoinedEvent
         fields = ('event_id',)
+

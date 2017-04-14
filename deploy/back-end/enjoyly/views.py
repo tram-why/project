@@ -3,7 +3,7 @@ from rest_framework import viewsets
 
 from enjoyly.models import Event, Location, JoinedEvent
 from enjoyly.serializers import UserSerializer, EventSerializer, EventCreateSerializer, LocationSerializer, \
-    JoinedEventSerializer
+    JoinedEventSerializer, JoinEventSerializer
 from .serializers import UserCreateSerializer, UserLoginSerializer
 from rest_framework.generics import CreateAPIView, DestroyAPIView, ListAPIView, UpdateAPIView, RetrieveAPIView, RetrieveUpdateAPIView
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly
@@ -45,6 +45,6 @@ class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
-class JoinedEventViewSet(viewsets.ModelViewSet):
+class JoinEventAPIView (CreateAPIView):
     queryset = JoinedEvent.objects.all()
-    serializer_class = JoinedEventSerializer
+    serializer_class = JoinEventSerializer

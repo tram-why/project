@@ -19,13 +19,12 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from enjoyly import views
 from rest_framework import routers
-from enjoyly.views import UserCreateAPIView, UserLoginAPIView, EventCreateAPIView
+from enjoyly.views import UserCreateAPIView, UserLoginAPIView, EventCreateAPIView, JoinEventAPIView
 
 router = routers.DefaultRouter()
 router.register(r'user',views.UserViewSet)
 router.register(r'event', views.EventViewSet)
 router.register(r'location', views.LocationViewSet)
-router.register(r'joinedevent', views.JoinedEventViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,5 +32,6 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework') ),
     url(r'^api/v1.0/register/', UserCreateAPIView.as_view(), name='register'),
     url(r'^api/v1.0/login/', UserLoginAPIView.as_view(), name='login'),
-    url(r'^api/v1.0/createevent', EventCreateAPIView.as_view(), name='create event')
+    url(r'^api/v1.0/createevent/', EventCreateAPIView.as_view(), name='create event'),
+    url(r'^api/v1.0/joinevent/', JoinEventAPIView.as_view(), name='join event')
 ]
