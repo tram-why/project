@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>enjoyly!</title>
+    <link rel="stylesheet" type="text/css" href="new%20event.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="header">
+            <span class="emblem">
+                <img src="images/enjoyly.png" width="60">
+               </span>
+            <span class="emblem1">
+                <img src="images/line.png" width="30">
+            </span>
+            <span class="emblem2">
+                <img src="images/enjoyly_hame (1).png" width="80">
+            </span>
+            <form class="search">
+                <input id="search" type="text" name="search" placeholder="search">
+            </form>
+            <span class=bottum><a href="#"><button>New event</button></a></span>
+            <span class="headertools"><a href="#"><img src="images/user-shape%20(2).png" width="40"></a></span>
+            <span class="headertools"><a href="#"><img src="images/calendar-page-empty.png" width="40"></a></span>
+            <span class="headertools"><a href="#"><img src="images/settings-work-tool.png" width="40"></a></span>
+        </div>
+    </nav>
+</header>
+<main>
+    <div>
+        <div>
+            <form>
+                <input type="text" name="name_of_event" placeholder="Name of event*">
+            </form>
+        </div>
+        <div class>
+            <form>
+                <select required name="type_of_event">
+                    <option value="" disabled selected hidden>Type of event*</option>
+                    <option>Movies</option>
+                    <option>Coffee</option>
+                    <option>Walks</option>
+                </select>
+                <label for="location">Location</label>
+                <input type="text" name="location" id="location">
+                <textarea rows="15" cols="30" name="text" placeholder="About event"></textarea>
+            </form>
+        </div>
+        <div>
+            <form>
+                <label for="date">Date*</label>
+                <input type="date" name="date" id="date">
+                <label for="time">Time*</label>
+                <input type="time" name="time" id="time">
+                <label for="age">Age of participants</label>
+                <input type="number" name="age_of_participants" id="age">
+                <label for="sex1">Sex of participants</label>
+                <input type="radio" checked name="sex" id="sex1"/>
+                <label for="sex1"> Male </label>
+                <input type="radio" name="sex" id="sex2"/>
+                <label for="sex2">Female</label>
+                <label for="max_number">Max number of people</label>
+                <input type="number" name="max_number_of_people" id="max_number">
+                <label for="min_budget">Min budget</label>
+                <input type="number" name="min_budget" id="min_budget">
+            </form>
+        </div>
+
+    </div>
+</main>
+<footer></footer>
+</body>
+</html>

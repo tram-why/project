@@ -5,12 +5,23 @@ from django.db import models
 
 # Create your models here.
 
+TYPECHOICE = (
+    (1, 'movies'),
+    (2, 'walks'),
+    (3, 'sport'),
+    (4, 'parties'),
+    (5, 'drink')
+)
+
 class Event(models.Model):
     user = models.ForeignKey(User)
     name = models.CharField(max_length=64)
     description = models.CharField(max_length=256)
     budget = models.IntegerField()
     numberOfPeople = models.IntegerField()
+    date = models.DateField()
+    time = models.TimeField()
+    type = models.CharField(max_length=1, choices=TYPECHOICE)
     phone = models.CharField(max_length=20)
     def __str__(self):
         return str(self.name)

@@ -1,0 +1,130 @@
+.left {
+    margin: 100px 0 100px 300px;
+
+    float: left;
+    position: absolute;
+}
+
+.right {
+
+    margin: 100px 0 100px 700px;
+    padding: 5px 15px 5px 15px;
+    width: 400px;
+    float: right;
+    border: solid 3px black;
+    position: absolute;
+   // background-color: #F02457;
+}
+
+p {
+    position: relative;
+    text-align: center;
+    line-height: 13px;
+}
+
+.mainDiv {
+
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    font-family: "Comic Sans MS";
+}
+
+.login input[type= "text"],
+.login input[type= "password"] {
+    font-style: italic;
+    font-size: 20px;
+    padding: 5px ;
+    border: 3px black solid;
+    outline: none;
+    width: 225px;
+    height: 25px;
+    display: block;
+    margin: auto;
+}
+.signIn {
+    width: 300px;
+    height: 60px;
+    display: block;
+    font-size: 38px;
+    margin: auto;
+    border: black 3px solid;
+    box-shadow: 3px 3px;
+    background: white;
+    outline: none;
+}
+
+.login {
+    margin-top: 10px;
+}
+.signIn:hover {
+    background-color: #B35668;
+}
+h3 {
+    text-align: center;
+}
+.f{
+    float: left;
+}
+form{
+    text-align: center;
+}
+select{
+    font-style: italic;
+    font-size: 20px;
+    padding: 5px;
+    border: 3px black solid;
+    outline: none;
+    width: 225px;
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+.sel{
+     margin-top: 5px;
+ }
+textarea{
+    border: 3px black solid ;
+}
+#phone{
+    border: 3px black solid ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.dataOfBirth{
+    display: inline-block;
+    margin: 10px;
+}
+.birth{
+    position: absolute;
+    margin-left: 50px;
+    padding-top: 7px;
+
+}
+#date_of_birth{
+    position: relative;
+    margin-left: 175px;
+    margin-right: 50px;
+
+}
+.calendar{
+    position: relative;
+    margin-left: 220px;
+}
+#sex1{
+    position: relative;
+    margin-left: 105px;
+}
+.sex{
+    display: inline-block;
+    margin: 10px;
+}
+.nameSex{
+    position: absolute;
+    margin-left: 55px;
+    padding-bottom: 7px;
+}
+
