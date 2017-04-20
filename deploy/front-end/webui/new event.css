@@ -1,3 +1,4 @@
+
 body{
     font-family: "Comic Sans MS";
 }
@@ -83,5 +84,20 @@ h1{
 }
 p{
     padding-left: 20px;
+}
+form{
+    display: inline-block;
+
+}
+.left{
+    float: left;
+
+}
+.right{
+    float: right;
+    padding: 20%;
+}
+table{
+
 }
 
