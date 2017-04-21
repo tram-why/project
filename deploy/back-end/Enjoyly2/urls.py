@@ -33,5 +33,6 @@ urlpatterns = [
     url(r'^api/v1.0/register/', UserCreateAPIView.as_view(), name='register'),
     url(r'^api/v1.0/login/', UserLoginAPIView.as_view(), name='login'),
     url(r'^api/v1.0/createevent/', EventCreateAPIView.as_view(), name='create event'),
-    url(r'^api/v1.0/joinevent/', JoinEventAPIView.as_view(), name='join event')
+    url(r'^api/v1.0/joinevent/', JoinEventAPIView.as_view(), name='join event'),
+    url(r'^accounts/', include('allauth.urls'))
 ]
