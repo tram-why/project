@@ -1,6 +1,10 @@
 
 body{
     font-family: "Comic Sans MS";
+    background-image: url(https://pp.userapi.com/c637331/v637331889/5fa3a/iCP6yFoN5Gk.jpg);
+    background-position: center top;
+    background-size: cover;
+
 }
 .navigation{
     border: solid black ;
@@ -33,7 +37,7 @@ button:hover {
     background-color: rgba(162, 169, 168, 0.34);
 }
 .header{
-    position: absolute;
+    position: static;
     min-width: 1330px;
     height: 55px;
     border-bottom: 4px solid black;
@@ -97,7 +101,28 @@ form{
     float: right;
     padding: 20%;
 }
-table{
-
+.mainclass {
+    top: 50%; /* Отступ в процентах от верхнего края окна */
+    left: 40%; /* Отступ в процентах от левого края окна */
+    width: 700px; /* Ширина блока */
+    height: auto; /* Высота блока */
+    position: absolute; /* Абсолютное позиционирование блока */
+    margin-top: -265px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
+    margin-left: -225px;
+    background-image: url(https://psv4.userapi.com/c810232/u78379889/docs/4847a55ee8cb/prozrach.png?extra=yXVGVk8F0mWyc2i8tSWTCLe437dkDXweLiiuyRMU8odYP9Q7uu3UvRq7ZOYZlhzRvSFaBooIIsKSL0uaw-gMRQw9LKh-5-PEyrLIvv2bbny_EOeASf6PZw);
+padding: 1% 1% 1% 1%;
 }
+.nameofevent input[type= "text"] {
+
+     font-style: italic;
+     font-size: 20px;
+     padding: 5px;
+     border: 1px black solid;
+     outline: none;
+     width: 700px;
+     height: 25px;
+     display: block;
+ }
+
+
 

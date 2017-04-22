@@ -21,7 +21,7 @@
             <form class="search">
                 <input id="search" type="text" name="search" placeholder="search">
             </form>
-            <span class=bottum><a href="#"><button>New event</button></a></span>
+            <span class=bottum><a href="#"><button>Save</button></a></span>
             <span class="headertools"><a href="#"><img src="images/user-shape%20(2).png" width="40"></a></span>
             <span class="headertools"><a href="#"><img src="images/calendar-page-empty.png" width="40"></a></span>
             <span class="headertools"><a href="#"><img src="images/settings-work-tool.png" width="40"></a></span>
@@ -29,78 +29,69 @@
     </nav>
 </header>
 <main>
-    <div>
-        <div class="nameofevent">
-            <form>
-                <input type="text" name="name_of_event" placeholder="Name of event*">
-            </form>
-        </div>
-        <div class="left">
+    <div class = "mainclass">
+        <table>
+
+            <caption>
+
+                <form class="nameofevent">
+
+                    <input type="text" name="name_of_event" placeholder="Name of event*">
+
+                </form>
+            </caption>
+
             <form method="post" action="handler.php">
-                <table width="100%" cellspacing="0" cellpadding="4">
-                    <tr>
-                        <td><select required name="type_of_event">
-                            <option value="" disabled selected hidden>Type of event*</option>
-                            <option>Movies</option>
-                            <option>Coffee</option>
-                            <option>Walks</option>
-                        </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" valign="top"><label for="location">Location</label>
-                            <input type="text" maxlength="50" size="20" name="location" id="location"></td>
-                    </tr>
-                    <tr>
-                        <td><textarea cols="35" rows="10" name="text" placeholder="About event"></textarea></td>
-                    </tr>
-                </table>
+                <tr>
+                    <td><select required name="type_of_event">
+                        <option value="" disabled selected hidden>Type of event*</option>
+                        <option>Movies</option>
+                        <option>Coffee</option>
+                        <option>Walks</option>
+                    </select>
+                    </td>
+                    <td><label for="date">Date*</label>
+                        <input type="date" name="date" id="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top"><label for="location">Location</label>
+                        <input type="text" maxlength="50" size="20" name="location" id="location"></td>
+                    <td><label for="time">Time*</label>
+                        <input type="time" name="time" id="time">
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="4"><textarea cols="35" rows="10" name="text" placeholder="About event"></textarea></td>
+                    <td>
+                        <label for="age">Age of participants</label>
+                        <input type="number" name="age_of_participants" id="age">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sex1">Sex of participants</label>
+                        <input type="radio" checked name="sex" id="sex1"/>
+                        <label for="sex1"> Male </label>
+                        <input type="radio" name="sex" id="sex2"/>
+                        <label for="sex2">Female</label>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="max_number">Max number of people</label>
+                        <input type="number" name="max_number_of_people" id="max_number">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><label for="min_budget">Min budget</label>
+                        <input type="number" name="min_budget" id="min_budget"></td>
+                </tr>
             </form>
-        </div>
-        <div class="right">
-            <form method="post" action="handler.php">
-                <table width="100%" cellspacing="0" cellpadding="4">
-                    <tr>
-                        <td><label for="date">Date*</label>
-                            <input type="date" name="date" id="date">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="time">Time*</label>
-                            <input type="time" name="time" id="time">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="age">Age of participants</label>
-                            <input type="number" name="age_of_participants" id="age">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="sex1">Sex of participants</label>
-                            <input type="radio" checked name="sex" id="sex1"/>
-                            <label for="sex1"> Male </label>
-                            <input type="radio" name="sex" id="sex2"/>
-                            <label for="sex2">Female</label>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <label for="max_number">Max number of people</label>
-                            <input type="number" name="max_number_of_people" id="max_number">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="min_budget">Min budget</label>
-                            <input type="number" name="min_budget" id="min_budget"></td>
-                    </tr>
-
-                </table>
-            </form>
-        </div>
-
+        </table>
     </div>
 </main>
 <footer></footer>

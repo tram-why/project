@@ -1,5 +1,8 @@
 body{
     min-width: 1330px;
+    background-image: url(https://pp.userapi.com/c637331/v637331889/5fa3a/iCP6yFoN5Gk.jpg);
+    background-position: center top;
+    background-size: cover;
 }
 .left {
     margin: 100px 0 100px 300px;
@@ -16,7 +19,9 @@ body{
     float: right;
     border: solid 3px black;
     position: absolute;
-    background-color: #c3b8cc;
+
+    background-image: url(https://psv4.userapi.com/c810232/u78379889/docs/4847a55ee8cb/prozrach.png?extra=yXVGVk8F0mWyc2i8tSWTCLe437dkDXweLiiuyRMU8odYP9Q7uu3UvRq7ZOYZlhzRvSFaBooIIsKSL0uaw-gMRQw9LKh-5-PEyrLIvv2bbny_EOeASf6PZw);
+
 }
 
 p {
@@ -33,6 +38,8 @@ p {
     bottom: 0;
     top: 0;
     font-family: "Comic Sans MS";
+
+
 }
 
 .login input[type= "text"],
@@ -71,6 +78,7 @@ h3 {
     border: black 3px solid;
     box-shadow: 3px 3px;
     background: white;
+
     outline: none;
 }
 
