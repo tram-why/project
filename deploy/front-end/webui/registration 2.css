@@ -1,19 +1,20 @@
+
 .left {
-    margin: 100px 0 100px 300px;
+    margin: 100px 0 100px 200px;
 
     float: left;
     position: absolute;
+
 }
 
 .right {
 
-    margin: 100px 0 100px 700px;
+    margin: 50px 0 100px 570px;
     padding: 5px 15px 5px 15px;
-    width: 400px;
+    width: 500px;
     float: right;
-    border: solid 3px black;
+    border: solid 1px black;
     position: absolute;
-   // background-color: #F02457;
 }
 
 p {
@@ -29,28 +30,29 @@ p {
     right: 0;
     bottom: 0;
     top: 0;
-    font-family: "Comic Sans MS";
+
 }
 
 .login input[type= "text"],
 .login input[type= "password"] {
     font-style: italic;
-    font-size: 20px;
+    font-size: 15px;
     padding: 5px ;
-    border: 3px black solid;
+    border: 1px black solid;
     outline: none;
-    width: 225px;
+    width: 290px;
     height: 25px;
     display: block;
     margin: auto;
 }
 .signIn {
-    width: 300px;
+    width: 290px;
     height: 60px;
     display: block;
     font-size: 38px;
     margin: auto;
-    border: black 3px solid;
+    border: black 1px solid ;
+    border-radius: 8px;
     box-shadow: 3px 3px;
     background: white;
     outline: none;
@@ -60,39 +62,53 @@ p {
     margin-top: 10px;
 }
 .signIn:hover {
-    background-color: #B35668;
+    background-color: blueviolet;
 }
 h3 {
     text-align: center;
 }
-.f{
-    float: left;
-}
+
 form{
     text-align: center;
 }
 select{
     font-style: italic;
-    font-size: 20px;
+    font-size: 15px;
     padding: 5px;
-    border: 3px black solid;
+    border: 1px black solid;
     outline: none;
-    width: 225px;
+    width: 300px;
     height: 40px;
     display: block;
     margin: auto;
 }
 .sel{
      margin-top: 5px;
+
  }
 textarea{
-    border: 3px black solid ;
+    font-style: italic;
+    font-size: 15px;
+    padding: 5px ;
+    border: 1px black solid;
+    outline: none;
+    width: 290px;
+    height: 50px;
+    display: block;
+    margin: auto;
+
 }
 #phone{
-    border: 3px black solid ;
+    border: 1px black solid ;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 3px;
+    width: 290px;
+    height: 30px;
+    outline: none;
+    font-style: italic;
+    font-size: 15px;
+
 }
 .dataOfBirth{
     display: inline-block;
@@ -100,14 +116,20 @@ textarea{
 }
 .birth{
     position: absolute;
-    margin-left: 50px;
-    padding-top: 7px;
+    margin-left: 95px;
+    padding-top: 15px;
 
 }
 #date_of_birth{
     position: relative;
-    margin-left: 175px;
+    margin-left: 185px;
     margin-right: 50px;
+    height: 30px;
+    width: 170px;
+   font-style: italic;
+    outline: none;
+    margin-top: -5px;
+
 
 }
 .calendar{
@@ -116,7 +138,7 @@ textarea{
 }
 #sex1{
     position: relative;
-    margin-left: 105px;
+    margin-left: 100px;
 }
 .sex{
     display: inline-block;
@@ -124,7 +146,16 @@ textarea{
 }
 .nameSex{
     position: absolute;
-    margin-left: 55px;
-    padding-bottom: 7px;
+    margin-left: 105px;
+    padding-bottom: 10px;
 }
+body{
+    background-image: url(images/background1.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Helvetica";
+
+}
+
 
