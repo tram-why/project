@@ -10,10 +10,10 @@
     <nav>
         <div class="header">
             <span class="emblem">
-                <img src="images/enjoyly.png" width="60">
+                <img src="images/48.png" width="40">
                </span>
             <span class="emblem1">
-                <img src="images/line.png" width="30">
+                <img src="images/line.png" width="18">
             </span>
             <span class="emblem2">
                 <img src="images/enjoyly_hame (1).png" width="80">
@@ -22,9 +22,9 @@
                 <input id="search" type="text" name="search" placeholder="search">
             </form>
             <span class=bottum><a href="#"><button>Save</button></a></span>
-            <span class="headertools"><a href="#"><img src="images/user-shape%20(2).png" width="40"></a></span>
-            <span class="headertools"><a href="#"><img src="images/calendar-page-empty.png" width="40"></a></span>
-            <span class="headertools"><a href="#"><img src="images/settings-work-tool.png" width="40"></a></span>
+            <span class="headertools"><a href="#"><img src="images/user-shape%20(2).png" width="30"></a></span>
+            <span class="headertools"><a href="#"><img src="images/calendar-page-empty.png" width="30"></a></span>
+            <span class="headertools"><a href="#"><img src="images/settings-work-tool.png" width="30"></a></span>
         </div>
     </nav>
 </header>
@@ -51,13 +51,19 @@
                     </select>
                     </td>
                     <td><label for="date">Date*</label>
+
+                    </td>
+                    <td>
                         <input type="date" name="date" id="date">
                     </td>
                 </tr>
                 <tr>
                     <td align="left" valign="top"><label for="location">Location</label>
-                        <input type="text" maxlength="50" size="20" name="location" id="location"></td>
+                        <input type="text" maxlength="50" size="15" name="location" id="location"></td>
                     <td><label for="time">Time*</label>
+
+                    </td>
+                    <td>
                         <input type="time" name="time" id="time">
                     </td>
                 </tr>
@@ -65,6 +71,9 @@
                     <td rowspan="4"><textarea cols="35" rows="10" name="text" placeholder="About event"></textarea></td>
                     <td>
                         <label for="age">Age of participants</label>
+
+                    </td>
+                    <td>
                         <input type="number" name="age_of_participants" id="age">
                     </td>
 
@@ -72,23 +81,34 @@
                 <tr>
                     <td>
                         <label for="sex1">Sex of participants</label>
+
+                    </td>
+                    <td>
                         <input type="radio" checked name="sex" id="sex1"/>
                         <label for="sex1"> Male </label>
                         <input type="radio" name="sex" id="sex2"/>
                         <label for="sex2">Female</label>
+                        <input type="radio" name="sex" id="sex3"/>
+                        <label for="sex2">Not matter</label>
                     </td>
 
                 </tr>
                 <tr>
                     <td>
                         <label for="max_number">Max number of people</label>
+
+                    </td>
+                    <td>
                         <input type="number" name="max_number_of_people" id="max_number">
                     </td>
 
                 </tr>
                 <tr>
                     <td><label for="min_budget">Min budget</label>
+
+                    <td>
                         <input type="number" name="min_budget" id="min_budget"></td>
+                    </td>
                 </tr>
             </form>
         </table>

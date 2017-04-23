@@ -1,9 +1,10 @@
 
 body{
-    font-family: "Comic Sans MS";
+    font-family: "Helvetica";
     background-image: url(https://pp.userapi.com/c637331/v637331889/5fa3a/iCP6yFoN5Gk.jpg);
     background-position: center top;
     background-size: cover;
+    background-attachment: fixed;
 
 }
 .navigation{
@@ -11,73 +12,84 @@ body{
     min-height: 64px;
 }
 input[type=text] {
-    width: 130px;
+    width: 150px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 12px;
     background-color: white;
     background-image: url("");
     background-repeat: no-repeat;
-    padding: 10px 20px 12px 40px;
+    padding: 10px 10px 10px 15px;
 
 }
 button{
-    width: 160px;
-    height: 50px;
-    font-size: 28px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
     margin: auto;
-    border: black 3px solid;
+    border: black 1px solid;
+    border-radius: 8px;
     box-shadow: 3px 3px;
     background: white;
     outline: none;
-
 }
+
 button:hover {
     background-color: rgba(162, 169, 168, 0.34);
 }
 .header{
-    position: static;
-    min-width: 1330px;
-    height: 55px;
-    border-bottom: 4px solid black;
-    vertical-align: middle;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-width: 1360px;
+    height: 60px;
+    border-bottom: 1px solid black;
     background-color: white;
 }
+
 .emblem{
     position: absolute;
     float: left;
-    margin-left: 70px;
+    margin-left: 240px;
+    margin-top: 10px;
 }
 .emblem1{
     position: absolute;
     float: left;
-    margin-left: 130px;
+    margin-left: 280px;
+
+    margin-top: 5px;
 }
 .emblem2{
     position: absolute;
     float: left;
-    margin-left: 160px;
+    margin-left: 295px;
+    margin-top: 10px;
 }
-.search{
+.search {
     position: absolute;
-    margin: 0 0 10px 43%;
+    margin: 10px 10px 10px 43%;
 }
+
 .bottum{
     position: static;
     float: right;
-    margin-right: 50px;
+    margin-right: 220px;
+    margin-top: 10px;
     vertical-align: middle;
 }
 .headertools{
     position: static;
     float: right;
     margin-right: 20px;
+    margin-top: 15px;
     vertical-align: middle;
 }
+
 #search{
     border-radius: 20px;
-    border-bottom-color: #c3b8cc;
+    border-bottom-color: #cc949e;
     border-right-color: #B35668;
     border-left-color: #B35668;
     border-top-color: purple;
@@ -87,7 +99,7 @@ h1{
     padding-left:40px;
 }
 p{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 form{
     display: inline-block;
@@ -103,14 +115,14 @@ form{
 }
 .mainclass {
     top: 50%; /* Отступ в процентах от верхнего края окна */
-    left: 40%; /* Отступ в процентах от левого края окна */
-    width: 700px; /* Ширина блока */
+    left: 33%; /* Отступ в процентах от левого края окна */
+    width: 900px; /* Ширина блока */
     height: auto; /* Высота блока */
     position: absolute; /* Абсолютное позиционирование блока */
     margin-top: -265px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
     margin-left: -225px;
-    background-image: url(https://psv4.userapi.com/c810232/u78379889/docs/4847a55ee8cb/prozrach.png?extra=yXVGVk8F0mWyc2i8tSWTCLe437dkDXweLiiuyRMU8odYP9Q7uu3UvRq7ZOYZlhzRvSFaBooIIsKSL0uaw-gMRQw9LKh-5-PEyrLIvv2bbny_EOeASf6PZw);
-padding: 1% 1% 1% 1%;
+    background-image: url(images/transparant.png);
+    padding: 1% 1% 1% 1%;
 }
 .nameofevent input[type= "text"] {
 
